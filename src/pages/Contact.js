@@ -9,10 +9,10 @@ function Contact() {
       <div
         className="leftSide"
         style={{ backgroundImage: `url(${PizzaLeft})` }}
-        inital={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -20 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.35 }}
       ></div>
       <div className="rightSide">
         <h1> Contact Us</h1>

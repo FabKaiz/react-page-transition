@@ -8,9 +8,10 @@ function Menu() {
   return (
     <motion.div
       className="menu"
-      inital={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -20 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.35 }}
     >
       <h1 className="menuTitle">Our Menu</h1>
       <div className="menuList">
