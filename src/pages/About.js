@@ -1,9 +1,16 @@
 import React from "react";
 import MultiplePizzas from "../assets/multiplePizzas.jpeg";
 import "../styles/About.css";
+import { motion } from "framer-motion/dist/framer-motion";
+
 function About() {
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      inital={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div
         className="aboutTop"
         style={{ backgroundImage: `url(${MultiplePizzas})` }}
@@ -26,7 +33,7 @@ function About() {
           cumque velit
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
